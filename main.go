@@ -6,17 +6,17 @@ import (
 	"strconv"
 )
 
-const conferenceTickets uint = 50
+const conferenceTickets uint = 120
 
 var conferencename = "Go conference"
-var Remainingtickets uint = 50
+var Remainingtickets uint = 120
 var bookings = make([]map[string]string, 0)
 
 func main() {
 
 	greetUsers()
 
-	for Remainingtickets > 0 && len(bookings) < 50 {
+	for Remainingtickets > 0 && len(bookings) < 120 {
 
 		firstname, lastname, email, usertickets := GetUserInput()
 		isValidName, isValidEmail, isValidTickets := UserInputValidation(firstname, lastname, email, usertickets, Remainingtickets)
